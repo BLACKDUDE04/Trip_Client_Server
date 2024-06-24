@@ -1,0 +1,249 @@
+
+:root{
+    --PrimaryColor: hsl(199,100%,33%);
+    --SecondayColor:hsl(187,85%,43%);
+    --gradientColor:linear-gradient(to right, hsl(187,85%,43%), hsl(199,100%,33%));
+    --WhiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(201,33%,16%);
+    --textColor:hsl(240,4%,36%);
+    --whiteColorDeam:hsl(0,0%,93%);
+    --greyText: rgb(190,190,190);
+    --inputColor: rgb(239,239,239);
+    --bodyColor: rgb(240,240,246);
+    --cardBG: rgb(225,225,235);
+    --greyBg: hsl(0,0%,96%);
+    --HoverColor: hsl(26,90%,50%);
+
+
+}
+
+.navBarSection{
+    .header{
+        position: fixed;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        background: transparent;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+
+        
+
+        .logoDiv{
+        .logo{
+            color: var(--WhiteColor);
+            font-weight: 600;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+
+            .icon{
+        
+                font-weight: 600;
+                cursor: pointer;
+                width: 140px;
+                height: 50px;
+                
+            }
+            h1{
+                background: var(--whiteColor);
+                color: white;
+                font-size: medium;
+                
+            }
+
+            .icon{
+                font-size: 25px;
+                color: var(--PrimaryColor);
+                margin-right: 10px;
+                
+
+            }
+        } 
+        
+        }
+
+        @media screen and (max-width: 768px) {
+            .navBar{
+                position: absolute;
+                background: var(--greyBg);
+                height: max-content;
+                width: 80%;
+                border-radius: 1rem;
+                top: -500rem;
+                left: 50%;
+                padding: 1rem;
+                transform: translate(-50%);
+                z-index: 1000;
+                box-shadow: 0 2px 4px 4px rgba(2, 15, 29, 0.904);
+                transition: .5s ease-in-out;
+                
+
+
+                .navLists{
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    margin: auto;
+                    padding: .5rem  0;
+                    
+
+                    .navItem{
+                        padding: .5rem  0;
+
+                        .navLink{
+                            color: var( --HoverColor);
+                            font-size: .9rem;
+                            font-weight: 600;
+                        
+                            &:hover{
+                                color: var(--blackColor);
+                            }
+                        }
+                    }
+
+                    .headerBtns{
+                        flex-direction: column;
+
+                        .btn{
+                            margin-top: 1rem;
+
+                            a{
+                                font-weight: 600;
+                                &:hover{
+                                color: var(--WhiteColor);
+                               }
+                            }
+                        
+                        }
+                        .loginBtn{
+                            background: none;
+                            border: 1px solid var(--PrimaryColor);
+                            a{
+                               
+                                color: var(--PrimaryColor);
+                            }
+                            &:hover{
+                                color: var(--HoverColor);
+                               a{
+                                  
+                                    color: var(--WhiteColor);    
+                                }
+                            
+                            }
+                        }
+                     
+                    }
+                }
+                .closeNavbar{
+                    position: absolute;
+                    top: 1rem;
+                    right: 1.5rem;
+                    color: var(--PrimaryColor);
+
+                    &:hover{
+                        color: var(--HoverColor);
+                    }
+                }
+            }
+            
+            .activeNavbar{
+                top: 7rem;
+            }
+        
+        
+        
+        }
+
+        .toggleNavbar{
+            .icon{
+                font-size: 25px;
+                color: var(--WhiteColor);
+            
+            &:hover{
+                color: var(--PrimaryColor);
+            }
+        }  
+        }
+
+    }
+
+    .activeHeader{
+        background: var(--greyText);
+        box-shadow: 0 2px 8px 2px rgba(178,178,178,0.45);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .toggleNavbar, .closeNavbar{
+        display: none;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+        .navBar{
+            .navLists{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem{
+                    .navLink{
+                        color: var(--WhiteColor);
+                        padding: 0 .45rem;
+                        font-size: .9rem;
+                        font-weight: 400;
+                        &:hover{
+                            color: var(--PrimaryColor);
+                        }
+                    }
+                }
+
+                .btn{
+                    margin-left: 1rem;
+
+                    a{
+                        color: var(--HoverColor);
+                        font-weight: 500;
+                    }
+                }
+
+                .loginBtn{
+                    background: none;
+                    border: 1px solid var(--PrimaryColor);
+
+                    &:hover{
+                        background: var(--PrimaryColor);
+                        a{
+                            color: var(--HoverColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .header{
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 .7rem;
+                }
+            }
+        }
+    }
+    
+  }
+
+  @media screen and (min-width: 1024px) {
+    .header{
+        
+          padding: 1rem 8.5rem !important;
+          
+    }
+    
+  }
